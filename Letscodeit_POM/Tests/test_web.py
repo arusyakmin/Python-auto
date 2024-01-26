@@ -8,15 +8,8 @@ import logging, datetime, data
 
 logging.info(f"The code started at: {datetime.datetime.now()}")
 
-# TODO, move to testdata
-#letskodeit_url = "https://www.letskodeit.com/practice"
-# google_url = "https://www.google.com/webhp?hl=en"
-# delete_log_file = "my_logs.log"
-# delete_txt_file = "live_coding_text.txt"
-# delete_screenshot_file = "Screenshots"
-
 driver = None
-helper_obj = Helper() # TODO< here is correct
+helper_obj = Helper() 
 driver = helper_obj.driver()
 
 helper_obj.navigate_to_page(driver, data.letskodeit_url)
@@ -49,6 +42,3 @@ helper_obj.delete_file(data.delete_screenshot_file)
 
 print("Test is passed!")
 logging.info(f"The code ended at: {datetime.datetime.now()}")
-
-
-# Nel, generally POM concept is kept, just creating object and call, use it is incorrcet, have a look to TODOs
